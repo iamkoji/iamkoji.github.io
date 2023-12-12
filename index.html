@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Bio - Example</title>
+  <meta property="og:description" content="Personal Website" />
+  <meta property="og:url" content="https://nautilus-mc.com" />
+  <meta property="og:image" content="https://imgur.com/a/w1yi0Nk" />
+  <meta property="twitter:image" content="https://imgur.com/a/w1yi0Nk" />
+  <meta name="twitter:card" content="k.jpg" />
+  <meta name="twitter:title" content="Koji's Personal Website" />
+  <meta name="twitter:description" content="Koji's Personal Website" />
+
+  <link rel="icon" href="assets/images/k.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/card.css">
+  <link rel="stylesheet" href="assets/css/test.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+</head>
+
+<body>
+  <script>
+    function startExperience() {
+      var overlay = document.getElementById("overlay");
+      var audio = document.getElementById("audio");
+
+      overlay.style.opacity = 0;
+      audio.volume = 0.1;
+      audio.play();
+    }
+  </script>
+
+  <div id="overlay" class="overlay fullscreen">
+    <label for="overlay-toggle" onclick="startExperience()">
+      <span class="hover" style="font-family: mono; font-size: 1em;">Click to enter!</span>
+    </label>
+  </div>
+
+  <audio loop="" preload="auto" id="audio">
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+
+  <div id="loading">
+    <div></div>
+  </div>
+
+  <div id="wrapper">
+    <div id="card">
+      <div id="banner" style="background-image: url(https://imgur.com/oVkkwFp.gif);"></div>
+      <div id="user-info">
+        <div id="avatar">
+          <img src="YOUR-AVATAR-URL" alt="Koji's Avatar">
+          <div id="status"></div>
+        </div>
+        <!--===== BADGES =====-->
+
+        <div id="badges">
+        </div>
+        <!--===== NAME =====-->
+
+        <div id="username">change if you want<span>#0000</span></div>
+      </div>
+      <hr />
+
+      <!--===== ABOUT ME =====-->
+
+      <div id="about">
+        <h4>About me</h4>
+        <p>--------------------------------------------------------</p>
+        <p>⭒❃.✮:▹𝐊𝐨𝐣𝐢◃:✮.❃⭒</p>
+        <br>
+        <p>"𝑾𝒆 𝒂𝒄𝒄𝒆𝒑𝒕 𝒕𝒉𝒆 𝒍𝒐𝒗𝒆 𝒘𝒆 𝒕𝒉𝒊𝒏𝒌 𝒘𝒆 𝒅𝒆𝒔𝒆𝒓𝒗𝒆"</p>
+        <br>
+        <p>𝐂𝐨𝐦𝐦𝐢𝐬𝐢𝐨𝐧𝐬: 🔴 - Closed</p>
+        <p>𝐖𝐞𝐛𝐬𝐢𝐭𝐞: https://nautilus-mc.com/</p>
+        <p>--------------------------------------------------------</p>
+      </div>
+
+      <!--===== SOCIAL =====-->
+
+      <div id="social">
+        <p> At the moment I don't have any other socials :D </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script src="assets/js/socket.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>
