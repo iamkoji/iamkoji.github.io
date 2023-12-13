@@ -1,55 +1,76 @@
 body {
-    margin: 0;
-    overflow: hidden;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000; /* Black background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1; /* Initial opacity set to cover the screen */
-    z-index: 999; /* Ensure the overlay is on top of other elements */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: opacity 2s; /* Slower fade (2 seconds) */
-  }
-  
-  .overlay label {
-    color: #fff; /* Text color */
-    font-family: 'Montserrat', sans-serif; /* Use Google Fonts for Montserrat or your preferred font */
-    font-size: 2em; /* Larger font size */
-    font-weight: bold; /* Bold text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a subtle text shadow */
-    transition: transform 0.3s ease-in-out; /* Add a subtle scale animation on hover */
-  }
-  
-  .overlay label:hover {
-    text-decoration: underline; /* Underline on hover */
-    transform: scale(1.1); /* Scale up the text on hover */
-  }
-  
-  .fullscreen {
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Add this to hide the checkbox */
-  #overlay-toggle {
-    display: none;
-  }
-  
-  /* Add this to hide the scrollbar when overlay is active */
-  body.overlay-active {
-    overflow: hidden;
-  }
-  
-  /* Add this to prevent zooming on iOS when overlay is active */
-  html.overlay-active {
-    touch-action: none;
-  }
-  
+  margin: 0;
+  overflow: hidden;
+}
+a:visited {
+  color: white;
+}
+@keyframes rainbow {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+a:hover {
+transform: scale(1.03)
+}
+
+a {
+  color: transparent;
+  background-image: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #FFFF00, #FF7F00, #FF0000);
+  background-size: 600% 100%;
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: transform 0.5s ease-in-out;
+  animation: rainbow 10s infinite linear;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Initial opacity set to cover the screen */
+  z-index: 999; /* Ensure the overlay is on top of other elements */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: opacity 2s; /* Slower fade (2 seconds) */
+}
+
+.overlay label {
+  color: #fff; /* Text color */
+  font-family: 'Montserrat', sans-serif; /* Use Google Fonts for Montserrat or your preferred font */
+  font-size: 2em; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a subtle text shadow */
+  transition: transform 0.3s ease-in-out; /* Add a subtle scale animation on hover */
+}
+
+.overlay label:hover {
+  text-decoration: underline; /* Underline on hover */
+  transform: scale(1.1); /* Scale up the text on hover */
+}
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+/* Add this to hide the checkbox */
+#overlay-toggle {
+  display: none;
+}
+
+/* Add this to hide the scrollbar when overlay is active */
+body.overlay-active {
+  overflow: hidden;
+}
+
+/* Add this to prevent zooming on iOS when overlay is active */
+html.overlay-active {
+  touch-action: none;
+}
