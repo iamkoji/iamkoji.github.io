@@ -5,9 +5,10 @@ This is a personal website, credits below, I decided to add on more features to 
 
 Additions:
 
-- "Click to enter!" Transition with a smooth fade
-- On click, it will play music to enhance user experience.
-- Added "Ative Developer Badge" Since the original one din't have it
+- "Click to enter!" type of transition with a smooth fade.
+- On click, it will play music because I like it.
+- Added a rainbow animation that I used for links.
+- Added "Ative Developer Badge" and "Originaly Known As" Since the original one din't have it.
 
     
 ### ✨ Credits to Phineas for the discord display check it out below:
